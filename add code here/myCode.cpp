@@ -1,3 +1,4 @@
+
 class MyCircularQueue {
     vector<int> v;
     int s=-1,r=-1;
