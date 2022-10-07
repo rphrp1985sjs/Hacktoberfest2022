@@ -97,20 +97,8 @@ Your School
 [Your Name](GitHub Link)
 ```
 
-### 3. Create a `Hello, World!` Script
+### 3. Add and improve leetcode problem's solution
 
-Add a `hello_world_yourusername.xx` script to the `scripts` directory in any language of your choice! Here is an example:
-
-```Javascript
-// LANGUAGE: Javascript
-// ENV: Node.js
-// AUTHOR: prianshu
-// GITHUB: https://github.com/rphrp1985
-
-console.log('Hello, World!');
-```
-
-Name the file `hello_world_yourusername.xx`. e.g., `hello_world_rp.js` or `hello_world_rp.py`.
 
 Add your scripts to the specific folder for specific languages created.
 
