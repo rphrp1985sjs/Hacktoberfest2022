@@ -1,0 +1,191 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness 4 U</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+    /* CSS Reset */
+    
+    body {
+        margin: 0px;
+        padding: 0px;
+        background: url('img/gym.jpg');
+        font-family: 'Baloo Bhaina 2', cursive;
+    }
+    
+    .left {
+        /* border: 2px solid red; */
+        color: white;
+        display: inline-block;
+        display: inline block;
+        position: absolute;
+        left: 60px;
+        top: 20px;
+    }
+    
+    .left img {
+        width: 100px;
+        height: 90px;
+    }
+    
+    .left div {
+        text-align: center;
+        line-height: 19px;
+        font-size: 20px;
+    }
+    
+    .mid {
+        /* border: 2px solid green; */
+        color: white;
+        display: block;
+        width: 40%;
+        margin: 30px auto
+    }
+    
+    .right {
+        /* border: 2px solid yellow; */
+        color: white;
+        display: inline block;
+        position: absolute;
+        right: 34px;
+        top: 40px;
+    }
+    
+    .navbar {
+        display: inline-block;
+    }
+    
+    .navbar li {
+        display: inline-block;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 30px 20px;
+    }
+    
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: grey;
+    }
+    
+    .btn {
+        margin: 0px 5px;
+        color: white;
+        background-color: black;
+        padding: 4px 14px;
+        border: 2px solid gray;
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+        font-family: 'Baloo Bhaina 2', cursive;
+    }
+    
+    .btn:hover {
+        background-color: rgb(168, 164, 164);
+    }
+    
+    .container {
+        border: 2px solid white;
+        color: white;
+        position: absolute;
+        margin: 100px 80px;
+        padding: 50px;
+        width: 30%;
+        border-radius: 28px;
+        top: 50px;
+    }
+    
+    .form-group input {
+        text-align: center;
+        padding: 7px;
+        display: block;
+        width: 300px;
+        border: solid black;
+        margin: 7px auto;
+        font-size: 18px;
+        font-weight: 100;
+        border-radius: 15px;
+        font-family: 'Baloo Bhaina 2', cursive;
+    }
+    
+    .container h1 {
+        text-align: center;
+        margin: 1 px;
+    }
+    
+    .container button {
+        display: block;
+        margin: 15px auto;
+        width: 33%;
+        padding: 6px;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="img/logo.png" alt="">
+            <div>Fitness 4 U</div>
+        </div>
+        <!-- id box for navbar -->
+        <div class=" mid ">
+            <ul class="navbar">
+                <li>
+                    <a href="#" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Fitness Center</a>
+                </li>
+                <li>
+                    <a href="#">Contact us</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- right box for buttons -->
+        <div class="right ">
+            <button class="btn">Call us now</button>
+            <button class="btn">Email us</button></div>
+    </header>
+    <div class="container">
+        <h1>Join the best gym of Asansol </h1>
+        <form action="noaction.php">
+            <div class="form-group">
+
+                <input type="text" name="" placeholder="Enter your Name">
+
+            </div>
+            <div class="form-group">
+
+                <input type="text" name="" placeholder="Enter your Age">
+
+            </div>
+            <div class="form-group">
+
+                <input type="text" name="" placeholder="Enter your Gender">
+
+            </div>
+            <div class="form-group">
+
+                <input type="text" name="" placeholder="Enter your Adress">
+
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
