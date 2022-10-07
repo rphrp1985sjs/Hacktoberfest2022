@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Code</string>
+    <string-array name="sitearray">
+        <item>None selected</item>
+        <item>CodeChef</item>
+        <item>CodeForces</item>
+        <item>TopCoders</item>
+        <item>AtCoder</item>
+        <item>CS Academy</item>
+        <item>HackerRank</item>
+        <item>HackerEarth</item>
+        <item>Kick Start</item>
+        <item>LeetCode</item>
+    </string-array>
+</resources>

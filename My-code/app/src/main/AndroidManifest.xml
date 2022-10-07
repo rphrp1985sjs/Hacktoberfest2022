@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.prianshuprasad.targetcp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TargetCP"
+        tools:targetApi="32">
+        <activity
+            android:name=".launchActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+
+
+
+        <activity
+            android:name=".contestView"
+            android:exported="false" >
+
+        </activity>
+
+        <receiver
+            android:name="StartAppOnBoot"
+            android:enabled="true"
+            android:exported="true"
+            >
+            <intent-filter>
+                <!--That name (YouWillNeverKillMe) you wrote on Myservice-->
+                <action android:name="YouWillNeverKillMe"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7730150285838464~9037186187" />
+
+        <activity
+            android:name=".ScheduleviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+
+        </activity>
+
+        <service
+            android:name=".notificationServices"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="dataSync" >
+
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+
+
+        </service>
+
+
+
+<!--        <provider-->
+<!--            android:name="com.example.android.datasync.provider.YourProvider"-->
+<!--            android:authorities="com.example.android.datasync.provider"-->
+<!--            android:exported="false"-->
+<!--            android:syncable="true"/>-->
+
+
+    </application>
+
+</manifest>

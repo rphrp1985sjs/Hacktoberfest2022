@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/todaybutton"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="20dp"
+                android:hapticFeedbackEnabled="true"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/black"
+
+                >
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today"
+                    android:textSize="25sp"
+                    />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/codechefbutton"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="20dp"
+                android:hapticFeedbackEnabled="true"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/black"
+
+                >
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CodeChef"
+                    android:textSize="25sp"
+                    />
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/codeforcesbutton"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="20dp"
+                android:hapticFeedbackEnabled="true"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/black"
+
+                >
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CodeForces"
+                    android:textSize="25sp"
+                    />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/todcoderbutton"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="20dp"
+                android:hapticFeedbackEnabled="true"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/black"
+
+                >
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TopCoder"
+                    android:textSize="25sp"
+                    />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/atcoderbutton"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="20dp"
+                android:hapticFeedbackEnabled="true"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/black"
+
+                >
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AtCoder"
+                    android:textSize="25sp"
+                    />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/Leetcodebutton"
+                android:padding="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="20dp"
+                android:hapticFeedbackEnabled="true"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/black"
+
+                >
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Leetcode"
+                    android:textSize="25sp"
+                    />
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </HorizontalScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
