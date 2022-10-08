@@ -91,7 +91,7 @@ class playground : AppCompatActivity() {
            runOnUiThread {
                updateTimer("Time: ${getTime(time,time2)}")
            }
-                Thread.sleep(1000)
+                Thread.sleep(500)
 
             }
 
@@ -105,7 +105,7 @@ class playground : AppCompatActivity() {
         updateGlobalTime()
         Handler().postDelayed({
             StartTime.visibility= View.GONE
-        },2000)
+        },1500)
 
 
     }
