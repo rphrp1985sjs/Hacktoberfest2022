@@ -1,0 +1,41 @@
+class Solution{
+    
+    
+     vector<int> v;
+     
+     void in(Node* root){
+         if(root==NULL) return ;
+         
+         in(root->left);
+         v.push_back(root->data);
+         in(root->right);
+         
+     }
+     int i=0;
+    
+     void post(Node* root){
+         if(root==NULL) return ;
+         
+         post(root->left);
+       
+         post(root->right);
+          root->data= v[i++];
+         
+     }
+    
+    
+    
+    
+    
+    
+    
+  public:
+    void convertToMaxHeapUtil(Node* root)
+    {
+        i=0;
+    v.clear();
+    in(root);
+    post(root);
+        // Your code goes here
+    }    
+};

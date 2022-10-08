@@ -1,0 +1,44 @@
+class Solution {
+    
+    vector<vector<int>> v;
+    
+    void dfs(TreeNode* root,int target,int curr,vector<int> temp){
+        if(root==nullptr){
+          
+             return;
+        }
+        
+        
+        curr+= root->val;
+        temp.push_back(root->val);
+        
+        
+        if(root->left==nullptr && root->right==nullptr){
+          if(target==curr){
+                v.push_back(temp);
+               
+            }
+        }
+        
+        
+        
+        
+        
+        dfs(root->left,target,curr,temp);
+        
+        dfs(root->right,target,curr,temp);
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+public:
+    vector<vector<int>> pathSum(TreeNode* root, int target) {
+        dfs(root,target,0,{});
+        return v;
+    }
+};

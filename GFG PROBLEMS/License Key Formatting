@@ -1,0 +1,29 @@
+class Solution
+{
+   public:
+    string ReFormatString(string s, int k){
+        string t="";
+        int last=0;
+        for(int i=s.length()-1;i>=0;i--)
+        {
+            if(s[i]=='-')
+            continue;
+            if(last==k){
+            t+='-';
+            
+                last=0;
+            }
+            
+            t+= toupper(s[i]);
+            last++;
+            
+            
+        }
+       
+        reverse(t.begin(),t.end());
+        
+        return t;
+    	
+    	
+    }
+};

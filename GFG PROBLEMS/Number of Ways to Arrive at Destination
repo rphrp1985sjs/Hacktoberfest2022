@@ -1,0 +1,103 @@
+class Solution {
+    vector<vector<pair<int,int>>> adj;
+    
+    vector<long long> dist;
+    
+    void dfs(int x, long long t){
+        
+        if(t>=dist[x])
+        return ;
+        
+        dist[x]=t;
+        
+        for(auto y: adj[x]){
+            dfs(y.first,t+y.second);
+        }
+        
+        
+        
+        
+    }
+    
+    
+  public:
+  int countPaths(int n, vector<vector<int>>& roads) {
+       // code here
+       
+       unordered_map<int,vector<pair<int,int>>> store;
+       for(int i=0;i<roads.size();i++){
+           // vector<pair<int,int>> temp;
+           // store[i]=temp;
+           int u = roads[i][0];
+           int v = roads[i][1];
+           int time = roads[i][2];
+           store[u].push_back({v,time});
+           store[v].push_back({u,time});
+       }
+       
+       
+       // for(auto it: store){
+       //     cout<<it.first<<"->";
+       //     for(auto i : it.second){
+       //         cout<<i.first<<" ";
+       //     }cout<<endl;
+       // }
+       vector<int> dis(n,INT_MAX);
+       int src = 0;
+       dis[0]=0;
+       multiset<pair<int,int>> s;
+       s.insert({0,src});
+
+       int count=1;
+       bool check = false;
+       while(!s.empty()){
+           pair<int,int> p = *(s.begin());
+           s.erase(s.begin());
+           int distance = p.first;
+           int node = p.second;
+
+           for(auto it: store[node]){
+               
+               
+               if(it.first==n-1){
+                   check =true;
+                   if(dis[it.first] > distance + it.second){
+                       s.erase({dis[it.first],it.first});
+                       count=1;
+                       
+                       dis[it.first] =  distance + it.second;
+
+                       s.insert({dis[it.first],it.first});
+
+                   // 
+                   }
+                   else if(dis[it.first] == distance + it.second){
+
+                       count++;
+                   }
+               }
+               if(it.first!=n-1){
+                   if(dis[it.first] > distance + it.second){
+                       s.erase({dis[it.first],it.first});
+                       
+                       dis[it.first] =  distance + it.second;
+                       s.insert({dis[it.first],it.first});
+
+                       
+                   }
+                   else if(dis[it.first] == distance + it.second){
+
+                       dis[it.first] =  distance + it.second;
+                       s.insert({dis[it.first],it.first});
+                       
+                   }
+               }
+           }
+       }
+       
+       if(check == false){
+           return 0;
+       }
+       return count;
+   }
+};

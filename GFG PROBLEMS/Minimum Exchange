@@ -1,0 +1,30 @@
+class Solution {
+public:
+int MinimumExchange(vector<vector<char>>matrix){
+    int cnt1 = 0,cnt2 = 0;
+   
+   for(int i=0;i<matrix.size();i++)
+   {
+       for(int j=0;j<matrix[i].size();j++)
+       {
+           if((i+j)%2==0)
+           {
+               if(matrix[i][j]=='A')
+               cnt2++;
+               else
+               cnt1++;
+           }
+           else
+           {
+               if(matrix[i][j]=='B')
+               cnt2++;
+               else
+               cnt1++;
+           }
+       }
+   }
+   
+   return min(cnt1,cnt2);
+}
+
+};

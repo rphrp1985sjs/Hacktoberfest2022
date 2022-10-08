@@ -1,0 +1,13 @@
+class Solution {
+  public:
+    unsigned long long int noOfWays(unsigned long long int n){
+        
+        
+     unsigned long long int ans=(n*(n-1))+2;
+       return ans;
+        
+        
+        
+        // code here
+    }
+};
