@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1044578660861",
+    "project_id": "brain-smasher",
+    "storage_bucket": "brain-smasher.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044578660861:android:a5164954f5d3a66d666994",
+        "android_client_info": {
+          "package_name": "com.prianshuprasad.brainsmasher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044578660861-4momarsrga66bpuhj9a9fp2n1pkf8pph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD7RQ_yUYSof5AyL3d2Ygyhz7B-cUAUKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044578660861-4momarsrga66bpuhj9a9fp2n1pkf8pph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
