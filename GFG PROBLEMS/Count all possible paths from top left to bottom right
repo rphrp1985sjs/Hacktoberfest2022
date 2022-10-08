@@ -1,0 +1,50 @@
+class Solution {
+  public:
+    long long int numberOfPaths(int m, int n){
+        
+        
+        long long arr[m+1][n+1];
+        
+         for(int i=0;i<=m;i++)
+        {
+            for(int j=0;j<=n;j++)
+            arr[i][j]=0;
+            
+        }
+        
+        long long mod = 1e9+7;
+        // arr[1][j]
+         for(int i=1;i<=m;i++)
+        {
+            for(int j=1;j<=n;j++)
+            {
+                if(i==1 && j==1)
+                arr[i][j]=1;
+                else
+                
+                arr[i][j]= arr[i-1][j]+ arr[i][j-1];
+                
+                arr[i][j]%=mod;
+                // cout<<arr[i][j]<<" ";
+                
+            }
+            // cout<<endl;
+        }
+        
+        
+        
+        
+        
+        return arr[m][n];
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // code here
+    }
+};

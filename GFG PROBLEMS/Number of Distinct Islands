@@ -1,0 +1,99 @@
+class Solution {
+    
+    bool isValid(int i,int j,int n ,int m){
+        
+        if(i<0 || j<0 || j>=m || i>=n)
+        return 0;
+        return 1;
+        
+        
+    }
+    
+    
+  public:
+    int countDistinctIslands(vector<vector<int>>& grid) {
+        
+        vector<pair<int,int>> xtemp = {{1,0},{-1,0},{0,1},{0,-1}  };
+        
+        
+        map<vector<pair<int,int>> ,int> mp;
+        
+        
+        int n= grid.size();
+        int m = grid[0].size();
+        
+        vector<vector<int>> vis(n,vector<int>(m,0));
+        
+        queue<pair<int,int>> q;
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                    
+                    if(vis[i][j] || grid[i][j]==0)
+                    continue;
+                    
+                    vector<pair<int,int>> temp;
+                    
+                    q.push({i,j});
+                    vis[i][j]=1;
+                  
+                    
+                    while(!q.empty()){
+                        
+                        auto ind= q.front();
+                        q.pop();
+                        
+                          temp.push_back({ind.first-i,ind.second-j});
+                        
+                        for(auto it: xtemp){
+                            
+                            int a= it.first;
+                            int b = it.second;
+                            a+=ind.first;
+                            b+= ind.second;
+                            
+                            
+                            if(!isValid(a,b,n,m))
+                            continue;
+                            
+                            if(vis[a][b] || grid[a][b]==0)
+                            continue;
+                            
+                            q.push({a,b});
+                            vis[a][b]=1;
+                            
+                            
+                            
+                        }
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    }
+                    
+                    // cout<<i<<" "<<j<<endl;
+                mp[temp]=1;
+                
+                
+                
+                
+            }
+        }
+        
+        
+        
+        
+        
+        
+        int x= mp.size();
+        
+        
+       return x; 
+        
+        
+        // code here
+    }
+};

@@ -1,0 +1,97 @@
+class Solution{
+    
+    struct Trie {
+ 
+    bool isEndOfWord;
+    int count;
+  
+    map<char, Trie*> mp;
+};
+
+typedef struct Trie Trie;
+   
+   void insert(string s,int index,Trie *root){
+       
+       if(index==s.length())
+       return ;
+       
+       if(root->mp[(s[index])]==NULL ){
+           
+        //   cout<<s<<" c "<<s[index]<<endl;
+           
+           Trie *n = new Trie;
+           
+           n->count=0;
+           
+           root->mp[s[index]]= n;
+           
+           
+           
+       }
+       
+       
+      root->mp[s[index]]->count++;
+      
+    //   cout<<s<<"   "<<s[index]<<" "<<rcount<<endl;
+      
+      insert(s,index+1,root->mp[s[index]]);
+      
+       
+       
+       
+       
+       
+   }
+   
+   
+   int q(string s,int index,Trie *root){
+       
+       if(root==NULL) return 0;
+       
+       
+       if(index==s.length())
+       return root->count;
+       
+  
+      
+      
+      return q(s,index+1,root->mp[s[index]]);
+      
+       
+       
+       
+       
+       
+   }
+   
+   
+    
+    
+    
+    
+    
+    
+    
+public:
+    vector<int> prefixCount(int n, int Q, string li[], string query[])
+    {
+        Trie *root= new Trie;
+        for(int i=0;i<n;i++)
+        {
+           insert(li[i],0,root); 
+        }
+        vector<int> ans;
+        
+        
+        
+        for(int i=0;i<Q;i++){
+            ans.push_back(q(query[i],0,root));
+        }
+        
+        
+        return ans;
+        
+        // code here
+    }
+};
+

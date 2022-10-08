@@ -1,0 +1,63 @@
+class Solution{ 
+     long long mod= 1e9+7;
+     
+     long long pow2(long long p){
+         if(p==0)
+         return 1;
+         if(p==1)
+         return 2;
+         
+         long long temp = pow2(p/2);
+         
+         temp = temp%mod * temp%mod;
+         temp%=mod;
+         
+         if(p%2==1){
+             temp*=2;
+             temp%=mod;
+             
+         }
+         
+         return temp;
+         
+         
+     }
+    
+    
+    
+public:
+    long long numberOfSubsequences(int n, long long A[]){
+        unordered_map<long long,long long> mp;
+       
+       long long k=1;
+       
+       for(int i=0;i<64;i++)
+       {
+           mp[k]=1;
+           k*=2;
+           
+       }
+       long long ans=0;
+       long long count=0;
+       
+       for(int i=0;i<n;i++){
+           
+          if(mp[A[i]])
+          count++;
+          
+           
+       }
+       
+    //   cout<<count<<endl;
+       return (pow2(count)-1)%mod;
+       
+       
+       
+       
+       return ans;
+        
+        
+        // code here 
+    }
+};
+
